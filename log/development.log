@@ -10186,3 +10186,123 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 26ms (Views: 14.5ms | ActiveRecord: 0.4ms | Allocations: 15749)
 
 
+Started GET "/articles/2" for ::1 at 2021-10-07 00:26:08 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:50:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 591)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 6452)
+Completed 200 OK in 18ms (Views: 8.2ms | ActiveRecord: 0.4ms | Allocations: 14535)
+
+
+Started GET "/articles" for ::1 at 2021-10-07 00:26:10 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2456)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 6033)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.3ms | Allocations: 6639)
+
+
+Started GET "/articles/4" for ::1 at 2021-10-07 00:26:11 +0530
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:50:in `set_article'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4140)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 5140)
+
+
+Started GET "/articles" for ::1 at 2021-10-07 00:26:13 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5750)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 6221)
+
+
+Started DELETE "/articles/2" for ::1 at 2021-10-07 00:26:16 +0530
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:50:in `set_article'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:42:in `destroy'
+  [1m[36mArticle Destroy (0.8ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/articles_controller.rb:42:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:42:in `destroy'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms | Allocations: 2826)
+
+
+Started GET "/articles" for ::1 at 2021-10-07 00:26:16 +0530
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:11
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1632)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5061)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.3ms | Allocations: 5519)
+
+
+Started GET "/articles/new" for ::1 at 2021-10-07 00:26:24 +0530
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 10.6ms | Allocations: 3202)
+  Rendered articles/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 3567)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 7130)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 7756)
+
+
+Started POST "/articles" for ::1 at 2021-10-07 00:26:26 +0530
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"", "description"=>""}, "commit"=>"Create Article"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 4.6ms | Allocations: 2343)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2439)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2507)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3840)
+
+
+  
+ActionView::Template::Error (undefined method `full' for #<ActiveModel::Errors:0x000000011c0ce280 @base=#<Article id: nil, title: "", description: "", created_at: nil, upated_at: nil>, @errors=[#<ActiveModel::Error attribute=title, type=blank, options={}>, #<ActiveModel::Error attribute=title, type=too_short, options={:count=>6}>, #<ActiveModel::Error attribute=description, type=blank, options={}>, #<ActiveModel::Error attribute=description, type=too_short, options={:count=>10}>]>):
+    1: <% if @article.errors.any? %>
+    2: <h2>The following errors prevented the article from being saved</h2>
+    3: <ul>
+    4:     <% @article.errors.full.messages.each do |msg| %>
+    5:         <li><%= msg %></li>
+    6:         <% end %>
+    7: </ul>
+  
+app/views/articles/_form.html.erb:4
+app/views/articles/new.html.erb:2
+app/controllers/articles_controller.rb:26:in `create'
