@@ -1,6 +1,4 @@
 <div class="container">
- 
-
   <div class="row justify-content-center">
     <div class="col-10">
     <%= render 'shared/errors', obj: @user%>
@@ -9,21 +7,21 @@
         <div class="form-group row">
           <%= f.label :Username, class: "col-2 col-form-label text-light" %>
           <div class="col-10">
-            <%= f.text_field :username, class: "form-control shadow rounded", placeholder: "Enter Username" %>
+            <%= f.text_field :username, class: "form-control shadow rounded", placeholder: "Enter Username" %></br>
           </div>
         </div>
 
         <div class="form-group row">
           <%= f.label :email, class: "col-2 col-form-label text-light" %>
           <div class="col-10"> 
-            <%= f.email_field :email, rows: 10, class: "form-control shadow rounded", placeholder: "Enter your email address" %>
+            <%= f.email_field :email, rows: 10, class: "form-control shadow rounded", placeholder: "Enter your email address" %></br>
           </div>
         </div>
         
         <div class="form-group row">
           <%= f.label :password, class: "col-2 col-form-label text-light" %>
           <div class="col-10"> 
-            <%= f.password_field :password, rows: 10, class: "form-control shadow rounded", placeholder: "Enter your password" %>
+            <%= f.password_field :password, rows: 10, class: "form-control shadow rounded", placeholder: "Enter your password" %></br>
           </div>
         </div>
 
