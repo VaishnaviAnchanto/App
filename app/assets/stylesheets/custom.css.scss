@@ -1,36 +1,41 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
+    background-color: black!important;
+  } 
 
-    background-color: black !important;
-    
-    } 
+  .nav-link
+  {
+        color: white !important;
+        
+  }
 
-    
-.nav-link {
+  #logo
+  {
+      float: left;
+      font-size: 1.7em;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      font-weight: bold;
 
-    color: white !important;
-}
-#logo{
-    float: left;
-    font-size: 1.7em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    font-weight: bold;
-}
-#home-container{
-    margin-top: 25px;
-}
-.jumbotron {
-    background-image: asset-url('sample3.jpg');
-    background-position: center center;
-    background-repeat: no repeat;
-    background-size: cover;
-    height: 425px;
-}
 
-html,
+  }
+
+  #home-container{
+
+      margin-top: 25px;
+  }
+
+  .jumbotron{
+
+      background-image: asset-url('alpha.jpg');
+      background-repeat: no-repeat;
+     background-size: cover;
+     height: 425px;
+  }
+
+  html,
 body {
   height: 100%;
 }
@@ -40,9 +45,6 @@ body {
   background-color: lightgrey;
 }
 
-/* Other Classes for Page Styling */
-
-body {
-  background: #007bff;
-  background: linear-gradient(to right, #0062E6, #33AEFF);
-}
+#sticky-footer {
+  flex-shrink: none;
+} 
